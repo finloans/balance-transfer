@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinLoans Balance Transfer Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4CAF50, #2ecc71); /* Eye-catching gradient */
+            margin: 0;
+            padding: 0;
+        }
+        .calculator {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add shadow for more depth */
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <!-- Logo of FinLoans -->
+    <img src="finloans%20logo.png" alt="FinLoans Logo" />
+
+    <h2>Home Loan Balance Transfer Calculator</h2>
+
+    <label for="outstandingBalance">Outstanding Loan Balance (₹):</label>
+    <input type="number" id="outstandingBalance" placeholder="Enter outstanding loan balance" />
+
+    <label for="currentRate">Current Interest Rate (%):</label>
+    <input type="number" id="currentRate" placeholder="Enter current interest rate" />
+
+    <label for="newRate">New Interest Rate (%):</label>
+    <input type="number" id="newRate" placeholder="Enter new interest rate" />
+
+    <label for="remainingTenure">Remaining Tenure (Years):</label>
+    <input type="number" id="remainingTenure" placeholder="Enter remaining tenure in years" />
+
+    <button onclick="calculateTransferSavings()">Calculate Savings</button>
+
+    <div class="result" id="transferResult"></div>
+</div>
+
+<script src="calculator.js"></script>
+
+</body>
+</html>
